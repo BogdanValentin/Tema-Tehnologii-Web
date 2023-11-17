@@ -1,0 +1,38 @@
+.navbar {
+    /*le pune pe aceasi linie*/
+    display: flex; 
+    /*link-urile sunt in centru*/
+    align-items: center;
+    /*padding nav sus, dreapta jos stanga*/
+    padding: 2vmin 3vmin 2vmin;
+    justify-content: center;
+}
+
+.nav-links {
+    /*fara buline*/
+    list-style: none;
+    padding-inline-start: 4vmin;
+}
+
+.nav-links a {
+    /*fara underline*/
+    text-decoration: none;
+}
+
+.nav-links li:hover,
+.nav-links a:hover {
+    color: #FF7F5B; /* Change to your desired hover color */
+}
+
+.logo {
+    height: 8vmin;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-links li {
+        padding-bottom: 1vmin;
+    }
+    .logo {
+        height: 15vw;
+    }
+}

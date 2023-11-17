@@ -1,0 +1,260 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
+    margin: 0; /* Remove default margin to prevent unwanted space */
+}
+
+* {
+    background-color: #1d1d1d;
+    color: #eee8c8;
+    font-family: 'VCR', monospace;
+    /*ia minumul viewportului ca sa fie responsive*/
+    font-size: 3vmin;
+}
+
+/* ------HOME------ */
+.cv {
+    padding: 5vmin 5vmin 5vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    text-align: justify;
+    margin-top: 0;
+}
+
+.cv ul {
+    max-width: 70vw;
+    font-size: 2.5vmin;
+}
+
+.cv h3 {
+    color: #FF7F5B;
+    margin-top: 10vmin;
+    width: 100%;
+    max-width: 70vw;
+}
+
+.title {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.bullet-list {
+    font-size: 2.2vmin;
+}
+
+.date {
+    font-size: 2.2vmin;
+    list-style-type: none;
+}
+
+.list-whitespace {
+    list-style-type: none;
+}
+
+.subtitle {
+    list-style-type: none;
+    font-weight: normal;
+    font-size: 2vmin;
+}
+
+.bullet-list-container {
+    margin-top: 2vh;
+    margin-bottom: 10vh;
+}
+
+.skills-container {
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
+}
+
+.download-link {
+    margin-top: 10vh;
+    padding: 1vh 2vw;
+    background-color: #FF7F5B;
+    color: white;
+    text-decoration: none;
+    font-size: 2vmin;
+    border-radius: 5px;
+}
+
+.download-link:hover {
+    background-color: #fda38b;
+}
+
+/* -----PORTFOLIO-- */
+
+/* Add this section for the card styling */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 5vh 10vw; /* Adjust the margin as needed */
+}
+
+.card {
+    width: 40%; /* Adjust the width and margin as needed */
+    margin-bottom: 7vh; /* Adjust the margin between cards */
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 20vw; /* Set a fixed height for the card images */
+    object-fit: cover; /* Maintain aspect ratio; cover the entire container */
+    border-radius: 15px 15px 0 0;
+}
+
+/* If you want to add black bars to smaller images */
+.card-image.small {
+    object-fit: contain; /* Maintain aspect ratio; contain within the container */
+    background-color: #000; /* Set the background color for black bars */
+}
+
+.card-text {
+    padding: 15px;
+    background-color: #292929;
+}
+
+.card-title {
+    background-color: #292929;
+    color: #35a8a3;
+}
+
+.card-description {
+    background-color: #292929;
+}
+
+.project-link {
+    text-decoration: none;
+}
+
+/* Add media query for responsiveness */
+@media only screen and (max-width: 768px) {
+    .card {
+        width: 100%; /* Make cards take full width on smaller screens */
+    }
+    .card-image {
+        height: 50vw;
+    }
+}
+
+
+
+/* ------CONTACT---- */
+
+.form-container {
+    text-align: center;
+    margin-top: 8vh;
+}
+
+form {
+    display: inline-block;
+}
+
+label {
+    display: block;
+    margin-bottom: 1vh;
+    text-align:center;
+}
+
+input[type="text"],
+textarea {
+    width: 40vw;
+    padding: 1vh;
+    margin-bottom: 1vh;
+    box-sizing: border-box;
+    border-radius: 1vw;
+    background-color: #303030;
+    border: none;
+}
+
+input[type="submit"] {
+    background-color: #FF7F5B;
+    color: white;
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #fda38b;
+}
+
+/* ------ABOUT------ */
+
+.about-text {
+    margin: 15vmin 10vw 10vmin;
+    text-align: justify;
+    
+}
+
+.profile-pic {
+    height: 40vmin;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5%;
+}
+
+.profile-pic-container {
+    padding-top: 7vmin;
+}
+
+.highlight1 {
+    color: #FF7F5B;
+    font-style: normal;
+}
+
+.highlight2 {
+    color: #35a8a3;
+    font-style: normal;
+}
+
+/* ------------------ */
+
+@font-face {
+    font-family: 'VCR';
+    src: url('../fonts/VCR.ttf') format('truetype');
+}
+
+@media only screen and (max-width: 768px) {
+    * {
+        font-size: 4vw;
+    }
+    .download-link {
+        margin-top: 10vh;
+        padding: 1vh 2vw;
+        background-color: #FF7F5B;
+        color: white;
+        text-decoration: none;
+        font-size: 4vmin;
+    }
+    .title {
+        font-size: 5vmin;
+    }
+    .subtitle {
+        font-size: 3.5vmin;
+    }
+    .bullet-list, .date {
+        font-size: 4vmin;
+    }
+    .cv h3 {
+        font-size: 6vmin;
+    }
+    .form-container {
+        margin-top: 20vh;
+        margin-bottom: 10vh;
+    }
+    input[type="text"],
+    textarea {
+        width: 70vw;
+    }
+    input[type="text"],
+    textarea {
+        border-radius: 2vw;
+    }
+}
