@@ -1,16 +1,15 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
-    margin: 0; /* Remove default margin to prevent unwanted space */
+    min-height: 100vh;
+    margin: 0;
 }
 
 * {
     background-color: #1d1d1d;
     color: #eee8c8;
     font-family: 'VCR', monospace;
-    /*ia minumul viewportului ca sa fie responsive*/
-    font-size: 3vmin;
+    font-size: 3vmin; /*ia minumul viewportului ca sa fie responsive*/
 }
 
 /* ------HOME------ */
@@ -19,7 +18,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     text-align: justify;
     margin-top: 0;
 }
@@ -86,32 +84,30 @@ body {
 
 /* -----PORTFOLIO-- */
 
-/* Add this section for the card styling */
 .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 5vh 10vw; /* Adjust the margin as needed */
+    margin: 5vh 10vw;
 }
 
 .card {
-    width: 40%; /* Adjust the width and margin as needed */
-    margin-bottom: 7vh; /* Adjust the margin between cards */
+    width: 40%;
+    margin-bottom: 7vh;
     border-radius: 15px;
-    overflow: hidden;
+    overflow: hidden; /* Rounded corner quick fix*/
 }
 
 .card-image {
     width: 100%;
-    height: 20vw; /* Set a fixed height for the card images */
-    object-fit: cover; /* Maintain aspect ratio; cover the entire container */
+    height: 20vw;
+    object-fit: cover; /*Se pastraza aspect ratio-ul chiar daca se taie nitel din colturi*/
     border-radius: 15px 15px 0 0;
 }
 
-/* If you want to add black bars to smaller images */
 .card-image.small {
-    object-fit: contain; /* Maintain aspect ratio; contain within the container */
-    background-color: #000; /* Set the background color for black bars */
+    object-fit: contain; /* Pt mobile */
+    background-color: #000;
 }
 
 .card-text {
@@ -132,32 +128,25 @@ body {
     text-decoration: none;
 }
 
-/* Add media query for responsiveness */
 @media only screen and (max-width: 768px) {
     .card {
-        width: 100%; /* Make cards take full width on smaller screens */
+        width: 100%;
     }
     .card-image {
         height: 50vw;
     }
 }
 
-
-
 /* ------CONTACT---- */
 
 .form-container {
-    text-align: center;
+    text-align: center; /* Centreaza tot containerul */
     margin-top: 8vh;
 }
 
-form {
-    display: inline-block;
-}
-
 label {
-    display: block;
-    margin-bottom: 1vh;
+    display: block; /* Label deasupra text boxului */
+    margin-bottom: 1vh; /* Spatiu intre label si text box*/
     text-align:center;
 }
 
@@ -166,7 +155,6 @@ textarea {
     width: 40vw;
     padding: 1vh;
     margin-bottom: 1vh;
-    box-sizing: border-box;
     border-radius: 1vw;
     background-color: #303030;
     border: none;
@@ -190,14 +178,13 @@ input[type="submit"]:hover {
 .about-text {
     margin: 15vmin 10vw 10vmin;
     text-align: justify;
-    
 }
 
 .profile-pic {
     height: 40vmin;
-    display: block;
-    margin: 0 auto;
-    border-radius: 5%;
+    display: block; 
+    margin: 0 auto; /* Centreaza poza impreuna cu display: block*/
+    border-radius: 5%; /* Rounded corners */
 }
 
 .profile-pic-container {

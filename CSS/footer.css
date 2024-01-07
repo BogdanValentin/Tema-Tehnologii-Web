@@ -17,7 +17,7 @@
 
 .social-icons a:hover,
 .fa:hover {
-    color: #FF7F5B; /* Change to your desired hover color */
+    color: #FF7F5B;
 }
 
 @media only screen and (max-width: 768px) {
